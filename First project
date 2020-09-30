@@ -1,0 +1,30 @@
+main_login = input("Do you want to login or register? ")
+
+while main_login == "login":
+    username = input("Enter username ")
+    password = input("Enter password ")
+    print("Your username is: " + username)
+    print("Your password is: " + password)
+    break
+
+while main_login == "register":
+    real_username = input("Enter a username ")
+    real_password = input("Enter a password ")
+    print("Great! Your username is: " + real_username)
+    print("Great! Your password is: " + real_password)
+    break
+
+if main_login == "register":
+    main_login = input("Do you want to login? (Y/N) ")
+    while main_login == "Y":
+        check_username = input("Enter username ")
+        if check_username != real_username:
+            print("Sorry, but that username is wrong")
+        check_password = input("Enter password ")
+        if check_password != real_password:
+            print("Sorry, but that password is wrong")
+        break
+
+    while main_login == "N":
+        print("Exiting site...")
+        break
